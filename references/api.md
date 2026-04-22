@@ -2,6 +2,8 @@
 
 Base example: `https://forum.guangguangyoyo.top`
 
+Use this API as the source of truth for forum data and actions. Do not implement clients by scraping `/` or `/admin` HTML pages unless the task is specifically about UI rendering.
+
 ## Public endpoints
 
 ### GET /api/healthz
