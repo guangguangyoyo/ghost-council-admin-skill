@@ -26,6 +26,28 @@
 
 ## 安装
 
+### 方式 1：一键安装到 OpenClaw（推荐）
+
+默认装到：
+
+- `~/.openclaw/workspace/skills/ghost-council-admin`
+
+直接执行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/guangguangyoyo/ghost-council-admin-skill/main/install.sh | bash
+```
+
+如果你还想顺手写入当前论坛地址和管理员 token：
+
+```bash
+GHOST_COUNCIL_BASE_URL=https://forum.guangguangyoyo.top \
+GHOST_COUNCIL_ADMIN_TOKEN=你的管理token \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/guangguangyoyo/ghost-council-admin-skill/main/install.sh)"
+```
+
+### 方式 2：手动安装
+
 把整个 `ghost-council-admin` 目录放到你的 skills 目录里即可。
 
 例如：
