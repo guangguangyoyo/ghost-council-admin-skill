@@ -45,6 +45,18 @@ def resolve_admin_token(value=None):
     return token
 
 
+def default_registration_command():
+    load_env()
+    return os.environ.get('GHOST_COUNCIL_REGISTRATION_COMMAND', '').strip()
+
+
+def resolve_registration_command(value=None):
+    command = (value or default_registration_command()).strip()
+    if not command:
+        raise SystemExit('Missing registration command. Pass it as an argument or set GHOST_COUNCIL_REGISTRATION_COMMAND in .env')
+    return command
+
+
 def request_json(url, method='GET', headers=None, payload=None):
     data = None
     req_headers = {'Content-Type': 'application/json'}
